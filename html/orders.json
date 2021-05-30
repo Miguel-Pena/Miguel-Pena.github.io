@@ -1,0 +1,13 @@
+    {
+        "cartItems": [
+            {
+                "id": 1,
+                "name": "TEMPO",
+                "category": "sunglasses",
+                "price": "$60.00",
+                "image_url": "images/sunglasses1.jpg",
+                "weight": "1.2OZ",
+                "size": "One size"
+            }
+        ]
+    }

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Crescent House</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="../javascript/product_retrieval.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href=homepage.html><img id="logo" src="../images/logo.png" alt="Crescent House Logo"></a>
+        <nav>
+            <ul>
+                <li><a href="eyewear.html">Eyewear</a></li>
+                <li><a href="rings.html">Rings</a></li>
+                <li><a href="necklaces.html" style="background-color: black; color: white;">Necklaces</a></li>
+                <li><a href="bracelets.html">Bracelets</a></li>
+                <li><a href="more.html">More</a></li>
+            </ul>
+        </nav>
+        <div id="searchbar">
+            <img id="searchbarIcon" src="../images/loupe.png">
+            <input type="text" id="searchbarInput" placeholder="Search...">
+        </div>
+        <a href="cart.html"><img id="cartIcon" src="../images/shopping-cart.png"></a>
+    </header>
+    <div id="navMobile">
+        <nav>
+            <ul>
+                <li><a href="eyewear.html">Eyewear</a></li>
+                <li><a href="rings.html">Rings</a></li>
+                <li><a href="necklaces.html" style="background-color:white; color:black;">Necklaces</a></li>
+                <li><a href="bracelets.html">Bracelets</a></li>
+                <li><a href="more.html">More</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="cover">
+        <img src="../images/cover2.png" alt="Cover Image">
+    </div>
+
+    <div id="filters">
+        <label for="sort" class="contactTitle">Sort:</label>
+        <select name="sort" id="sort">
+            <option value='New'>New</option>
+            <option value='LH'>Price: Low to Highest</option>
+            <option value='HL'>Price: Highest to Lowest</option>
+        </select>
+    </div>
+    <hr style="margin: 0 100px">
+
+    <div id="productsArea">
+        <!--div class="productInfo" style="grid-column: 1/2;">
+            <img class="productImg" src="../../images/necklace1.png">
+            <div class="productName">Cross pendant</div>
+            <div class="productPrice">$39.50</div>
+            <button class="addProductBtn">Add to Cart</button>
+        </div>
+
+        <div class="productInfo" style="grid-column: 2/3;">
+            <img class="productImg" src="../../images/necklace2.png">
+            <div class="productName">Stainless steel pendant</div>
+            <div class="productPrice">$26.00</div>
+            <button class="addProductBtn">Add to Cart</button>
+        </div>
+
+        <div class="productInfo" style="grid-column: 3/4;">
+            <img class="productImg" src="../../images/necklace3.png">
+            <div class="productName">Stainless thin neckchain</div>
+            <div class="productPrice">$19.70</div>
+            <button class="addProductBtn">Add to Cart</button>
+        </div>
+
+        <div class="productInfo">
+            <img class="productImg" src="../../images/necklace4.png">
+            <div class="productName">Black steel pendant Two Pack</div>
+            <div class="productPrice">$35.50</div>
+            <button class="addProductBtn">Add to Cart</button>
+        </div>
+
+        <div class="productInfo">
+            <img class="productImg" src="../../images/necklace5.png">
+            <div class="productName">Moon pendant</div>
+            <div class="productPrice">$29.00</div>
+            <button class="addProductBtn">Add to Cart</button>
+        </div>
+
+        <div class="productInfo">
+            <img class="productImg" src="../../images/necklace6.png">
+            <div class="productName">Hxgn pendant</div>
+            <div class="productPrice"><span class="origPrice">$31.25</span><span class="salePrice"">$23.44</span></div>
+            <button class="addProductBtn">Add to Cart</button>
+        </div-->
+    </div>
+
+    <footer>
+        <h3>Follow us</h3>
+        <div id="socialMediaIcons">
+            <img id="twt" src="../images/icon_twt.png">
+            <img id="fb" src="../images/icon_fb.png">
+            <img id="insta" src="../images/icon_insta.png">
+        </div>
+        <ul id="rightList">
+            <li><a href="footer/about.html">About</a></li>
+            <li><a href="footer/faqs.html">FAQs</a></li>
+            <li><a href="footer/contact.html">Contact</a></li>
+        </ul>
+        <ul id="leftList">
+            <li><a>Terms & Conditions</a></li>
+            <li><a>Privacy Policy</a></li>
+            <li><a>Return Policy</a></li>
+        </ul>
+        <p>&#169 2021 CRESCENT HOUSE All Rights Reserved</p>
+    </footer>
+    
+    <script>showJsonProducts("necklace");</script>
+
+</body>
+
+</html>

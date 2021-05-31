@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Crescent House</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="../javascript/product_retrieval.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html"><img id="logo" src="../images/logo.png" alt="Crescent House Logo"></a>
+        <nav>
+            <ul>
+                <li><a href="eyewear.html" style="background-color: black; color: white;">Eyewear</a></li>
+                <li><a href="rings.html">Rings</a></li>
+                <li><a href="necklaces.html">Necklaces</a></li>
+                <li><a href="bracelets.html">Bracelets</a></li>
+                <li><a href="more.html">More</a></li>
+            </ul>
+        </nav>
+        <div id="searchbar">
+            <img id="searchbarIcon" src="../images/loupe.png">
+            <input type="text" id="searchbarInput" placeholder="Search...">
+        </div>
+        <a href="cart.html"><img id="cartIcon" src="../images/shopping-cart.png"></a>
+    </header>
+    <div id="navMobile">
+        <nav>
+            <ul>
+                <li><a href="eyewear.html" style="background-color:white; color:black;">Eyewear</a></li>
+                <li><a href="rings.html">Rings</a></li>
+                <li><a href="necklaces.html">Necklaces</a></li>
+                <li><a href="bracelets.html">Bracelets</a></li>
+                <li><a href="more.html">More</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="cover">
+        <img src="../images/cover1.png" alt="Cover Image">
+    </div>
+
+    <div id="filters">
+        <label for="sort" class="contactTitle">Sort:</label>
+        <select name="sort" id="sort" onchange="filter(this.value)">
+            <option value='New'>New</option>
+            <option value='LH'>Price: Low to Highest</option>
+            <option value='HL'>Price: Highest to Lowest</option>
+        </select>
+    </div>
+    <hr style="margin: 0 100px">
+
+    <div id="productsArea">
+    </div>
+
+    <footer>
+        <h3>Follow us</h3>
+        <div id="socialMediaIcons">
+            <img id="twt" src="../images/icon_twt.png">
+            <img id="fb" src="../images/icon_fb.png">
+            <img id="insta" src="../images/icon_insta.png">
+        </div>
+        <ul id="rightList">
+            <li><a href="footer/about.html">About</a></li>
+            <li><a href="footer/faqs.html">FAQs</a></li>
+            <li><a href="footer/contact.html">Contact</a></li>
+        </ul>
+        <ul id="leftList">
+            <li><a>Terms & Conditions</a></li>
+            <li><a>Privacy Policy</a></li>
+            <li><a>Return Policy</a></li>
+        </ul>
+        <p>&#169 2021 CRESCENT HOUSE All Rights Reserved</p>
+    </footer>
+
+    <script>showJsonProducts("sunglasses");</script>
+
+</body>
+
+</html>

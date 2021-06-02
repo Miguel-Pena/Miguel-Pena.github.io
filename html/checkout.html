@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Crescent House</title>
+    <link rel="stylesheet" type="text/css" href="..\css\style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel='icon' href='../favicon.ico?v=2' type='image/x-icon'>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html" l><img id="logo" src="../images/logo.png" alt="Crescent House Logo"></a>
+        <nav>
+            <ul>
+                <li><a href="eyewear.html">Eyewear</a></li>
+                <li><a href="rings.html">Rings</a></li>
+                <li><a href="necklaces.html">Necklaces</a></li>
+                <li><a href="bracelets.html">Bracelets</a></li>
+                <li><a href="more.html">More</a></li>
+            </ul>
+        </nav>
+        <div id="searchbar">
+            <img id="searchbarIcon" src="../images/loupe.png">
+            <input type="text" id="searchbarInput" placeholder="Search...">
+        </div>
+        <a href="cart.html"><img id="cartIcon" src="../images/shopping-cart.png"></a>
+    </header>
+    <div id="navMobile">
+        <nav>
+            <ul>
+                <li><a href="eyewear.html">Eyewear</a></li>
+                <li><a href="rings.html">Rings</a></li>
+                <li><a href="necklaces.html">Necklaces</a></li>
+                <li><a href="bracelets.html">Bracelets</a></li>
+                <li><a href="more.html">More</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="checkoutHeading">
+        <h1>CHECKOUT</h1>
+        <div id="checkoutLinks">
+            <a href="cart.html">Cart</a>
+            <img src="../images/arrow.png">
+            <a style="border-bottom: 1px solid #707070">Information</a>
+            <img src="../images/arrow.png">
+            <a>Shipping</a>
+            <img src="../images/arrow.png">
+            <a>Payment</a>
+        </div>
+    </div>
+
+    <div id="checkoutArea">
+        <div id="checkoutBox">
+            <form>
+                <h3>CONTACT INFORMATION</h3>
+                <input id="formEmail" class="inputField" type="email" placeholder="Email">
+                <hr>
+                <h3>SHIPPING ADDRESS</h3>
+                <input id="fname" class="inputField" type="text" placeholder="First Name">
+                <input id="lname" class="inputField" type="text" placeholder="Last Name">
+                <input id="address" class="inputField" type="text" placeholder="Address">
+                <input id="address2" class="inputField" type="text" placeholder="Apartment, suite, etc. (optional)">
+                <input id="city" class="inputField" type="text" placeholder="City">
+                <div id="addressDetails">
+                    <select name="country" id="country">
+                        <option value='' disabled selected hidden>Country</option>
+                        <option value='us'>United States</option>
+                        <option value='ca'>Canada</option>
+                        <option value='uk'>United Kingdom</option>
+                        <option value='au'>Australia</option>
+                    </select>
+                    <select name="state" id="state">
+                        <option value='' disabled selected hidden>State</option>
+                        <option value='al'>Alabama</option>
+                        <option value='ak'>Alaska</option>
+                        <option value='as'>American Samoa</option>
+                        <option value='az'>Arizona</option>
+                        <option value='ar'>Arkansas</option>
+                        <option value='ca'>California</option>
+                        <option value='co'>Colorado</option>
+                        <option value='ct'>Connecticut</option>
+                        <option value='de'>Delaware</option>
+                        <option value='fl'>Florida</option>
+                        <option value='ga'>Georgia</option>
+                        <option value='gu'>Guam</option>
+                        <option value='hi'>Hawaii</option>
+                        <option value='id'>Idaho</option>
+                        <option value='il'>Illinois</option>
+                        <option value='in'>Indiana</option>
+                        <option value='ia'>Iowa</option>
+                        <option value='ks'>Kansas</option>
+                        <option value='ky'>Kentucky</option>
+                        <option value='la'>Louisiana</option>
+                        <option value='me'>Maine</option>
+                        <option value='mh'>Marshall Islands</option>
+                        <option value='md'>Maryland</option>
+                        <option value='ma'>Massachusetts</option>
+                        <option value='mi'>Michigan</option>
+                        <option value='fsn'>Micronesia</option>
+                        <option value='mn'>Minnesota</option>
+                        <option value='ms'>Mississippi</option>
+                        <option value='mo'>Missouri</option>
+                        <option value='mt'>Montana</option>
+                        <option value='ne'>Nebraska</option>
+                        <option value='nv'>Nevada</option>
+                        <option value='nh'>New Hampshire</option>
+                        <option value='nj'>New Jersey</option>
+                        <option value='nm'>New Mexico</option>
+                        <option value='ny'>New York</option>
+                        <option value='nc'>North Carolina</option>
+                        <option value='nd'>North Dakota</option>
+                        <option value='mp'>Northern Mariana Islands</option>
+                        <option value='oh'>Ohio</option>
+                        <option value='ok'>Oklahoma</option>
+                        <option value='or'>Oregon</option>
+                        <option value='pw'>Palau</option>
+                        <option value='pa'>Pennsylvania</option>
+                        <option value='pr'>Puerto Rico</option>
+                        <option value='ri'>Rhode Island</option>
+                        <option value='sc'>South Carolina</option>
+                        <option value='sd'>South Dakota</option>
+                        <option value='tn'>Tennessee</option>
+                        <option value='tx'>Texas</option>
+                        <option value='vi'>U.S. Virgin Islands</option>
+                        <option value='ut'>Utah</option>
+                        <option value='vt'>Vermont</option>
+                        <option value='va'>Virginia</option>
+                        <option value='wa'>Washington</option>
+                        <option value='dc'>Washington DC</option>
+                        <option value='wv'>West Virginia</option>
+                        <option value='wi'>Wisconsin</option>
+                        <option value='wy'>Wyoming</option>
+                    </select>
+                    <input id="zip" type="text" placeholder="ZIP code">
+                </div>
+                <input id="phone" class="inputField" type="text" placeholder="Phone">
+            </form>
+            <a id="shippingBtn" href="shipping.html" onclick="saveFormData()">Continue to shipping</a>
+        </div>
+        <div id="cartSummaryBox">
+
+            <div id="cartItemsBox">
+            </div>
+
+            <hr style="margin: 2em 10px 1em 10px;">
+            <div class="subtotalInfo">
+                <div>Subtotal</div>
+                <div id="dashedLine"></div>
+                <div id="cartSummarySubtotal"></div>
+            </div>
+            <div class="subtotalInfo">
+                <div>Shippping</div>
+                <div id="dashedLine" style="width: 33%;"></div>
+                <div style="font-style: italic; font-size: 12px;">Calculated at next step</div>
+            </div>
+            <hr style="margin: 2em 10px 1em 10px;">
+            <div class="subtotalInfo" style="margin-bottom: 0;">
+                <div style="font-weight: bold;">TOTAL</div>
+                <div id="dashedLine" style="width: 35%;"></div>
+                <div style="font-style: italic; font-size: 12px;">Calculated at next step</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h3>Follow us</h3>
+        <div id="socialMediaIcons">
+            <img id="twt" src="../images/icon_twt.png">
+            <img id="fb" src="../images/icon_fb.png">
+            <img id="insta" src="../images/icon_insta.png">
+        </div>
+        <ul id="rightList">
+            <li><a href="footer/about.html">About</a></li>
+            <li><a href="footer/faqs.html">FAQs</a></li>
+            <li><a href="footer/contact.html">Contact</a></li>
+        </ul>
+        <ul id="leftList">
+            <li><a>Terms & Conditions</a></li>
+            <li><a>Privacy Policy</a></li>
+            <li><a>Return Policy</a></li>
+        </ul>
+        <p>&#169 2021 CRESCENT HOUSE All Rights Reserved</p>
+    </footer>
+
+    <script src="../javascript/checkout.js"></script>
+
+</body>
+
+</html>

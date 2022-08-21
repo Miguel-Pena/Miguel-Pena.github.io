@@ -70,7 +70,7 @@ if (shippingMethod && localStorage.getItem("shipping method") != null) {
     shippingMethod.innerHTML = localStorage.getItem('shipping method');
 }
 
-let inputEmail= document.getElementById("formEmail");
+let inputEmail = document.getElementById("formEmail");
 let inputFisrtName = document.getElementById("fname");
 let inputLastName = document.getElementById("lname");
 let inputAddress1 = document.getElementById("address");

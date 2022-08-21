@@ -89,18 +89,23 @@ function getCartItems() {
                         <img class="cartItemImg" src=${data.products[i].image_url}>
                         <div class="cartItemInfo">
                             <div class="cartItemName">${data.products[i].name}</div>
-                            <div class="cartItemPrice">$${data.products[i].price}</div>
                             <div class="cartItemSize">${data.products[i].size}</div>
                         </div>
-                        <img class="cartItemTrash" src="../images/garbage.png" role="button" onclick="deleteItem(${data.products[i].id})">
-                        <label for="cartItemQty${data.products[i].id}" class="cartItemQtyLabel">Quantity:</label>
-                        <select name="quantity" id="cartItemQtyFor${data.products[i].id}" class="cartItemQtySelect" onchange="updateItemQty(${data.products[i].id})">
-                            <option value='1'>1</option>
-                            <option value='2'>2</option>
-                            <option value='3'>3</option>
-                            <option value='4'>4</option>
-                            <option value='5'>5</option>
-                        </select>
+                        <div class="cartItemRemoveArea">
+                            <img class="cartItemTrashIcon" src="../images/remove_icon.png" role="button" onclick="deleteItem(${data.products[i].id})">
+                            <div class="cartItemRemoveBtn" role="button" onclick="deleteItem(${data.products[i].id})">Remove</div>
+                        </div>
+                        <div class="cartItemQtyArea">
+                            <label for="cartItemQty${data.products[i].id}" class="cartItemQtyLabel">Quantity</label>
+                            <select name="quantity" id="cartItemQtyFor${data.products[i].id}" class="cartItemQtySelect" onchange="updateItemQty(${data.products[i].id})">
+                                <option value='1'>1</option>
+                                <option value='2'>2</option>
+                                <option value='3'>3</option>
+                                <option value='4'>4</option>
+                                <option value='5'>5</option>
+                            </select>
+                        </div>
+                        <div class="cartItemPrice">$${data.products[i].price}</div>
                     </div>
                     `
                 }
@@ -117,7 +122,7 @@ function getCartItems() {
 
             let div = document.createElement('div');
             div.id = 'emptyCartBtn';
-            div.innerHTML = 'Empty Cart'
+            div.innerHTML = 'EMPTY CART'
             document.getElementById('subtotalItemsQty').innerHTML = itemPrices.length + ' item(s)'
             document.getElementById('subtotal').innerHTML = '$'+ subtotal.toFixed(2)
             document.getElementById('cartBox').innerHTML = productInfo;

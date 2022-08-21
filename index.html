@@ -10,7 +10,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link rel='icon' href='favicon.ico?v=2' type='image/x-icon'>
+    <link rel='icon' href='favicon.ico?v=2' type='image/x-icon' >
 </head>
 
 <body>
@@ -29,7 +29,7 @@
             <img id="searchbarIcon" src="images/loupe.png">
             <input type="text" id="searchbarInput" placeholder="Search...">
         </div>
-        <a id ="cartContainer" href="html/cart.html">
+        <a id="cartContainer" href="html/cart.html">
             <img id="cartIcon" src="images/shopping-cart.png">
             <div id="cartCounter">0</div>
         </a>
@@ -52,26 +52,23 @@
         <div class="mySlides fade">
             <img src="images/slide1.jpg" alt="slideshow" style="width:100%">
             <div class='parallelogram' style='margin-left:auto;margin-right:auto;'>
-                <div class='parallelogramText'>Discover the new you</div>
-            </div>
-
+            <div class='parallelogramText'>Discover the new you</div>
         </div>
 
-
+        </div>
         <div class="mySlides fade">
             <img src="images/slide2.png" alt="slideshow" style="width:100%">
             <div class='parallelogram' style='margin-left:auto;margin-right:auto;'>
                 <div class='parallelogramText'>Discover the new you</div>
             </div>
         </div>
-
         <div class="mySlides fade">
             <img src="images/slide3.png" alt="slideshow" style="width:100%">
             <div class='parallelogram' style='margin-left:auto;margin-right:auto;'>
                 <div class='parallelogramText'>Discover the new you</div>
             </div>
-
         </div>
+
         <div id="dots" style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
@@ -95,38 +92,47 @@
 
     <div id="ad">
         <!--img src="../images/ad.png"-->
-        <div id="adHeading">SPRING SALE</div>
+        <div id="adHeading">SUMMER SALE</div>
         <div id="adDesc">25% OFF on selected products</div>
         <a href="html/sale.html" id="adBtn">SHOP NOW</a>
     </div>
 
     <div id="trendingContainer">
-        <h2>What's Trending</h2>
+        <h2>WHAT'S TRENDING</h2>
         <div id="trendingBoxes">
             <div class="trendingItem">
-                <a href="html/eyewear.html"><img src="images/sunglasses7.png"></a>
+                <a href="html/eyewear.html"><img src="images/sunglasses2.jpg"></a>
             </div>
             <div class="trendingItem">
-                <a href="html/necklaces.html"><img src="images/necklace2.png"></a>
+                <a href="html/necklaces.html"><img src="images/necklace2.jpg"></a>
             </div>
             <div class="trendingItem">
-                <a href="html/bracelets.html"><img src="images/bracelet2.png"></a>
+                <a href="html/bracelets.html"><img src="images/bracelet2.jpg"></a>
             </div>
             <div class="trendingItem">
-                <a href="html/bracelets.html"><img src="images/bracelet1.png"></a>
+                <a href="html/bracelets.html"><img src="images/bracelet1.jpg"></a>
             </div>
             <div class="trendingItem">
-                <a href="html/rings.html"><img src="images/ring3.png"></a>
+                <a href="html/rings.html"><img src="images/ring3.jpg"></a>
+            </div>
+            <div class="trendingItem">
+                <a href="html/eyewear.html"><img src="images/sunglasses4.jpg"></a>
+            </div>
+            <div class="trendingItem">
+                <a href="html/rings.html"><img src="images/ring4.jpg"></a>
             </div>
         </div>
+        <button class="trendingBtn" id="leftBtn" type="button" onclick="slide('left')">&#10094;</button>
+        <button class="trendingBtn" id="rightBtn" type="button" onclick="slide('right')">&#10095;</button>
     </div>
+
 
     <footer>
         <h3>Follow us</h3>
         <div id="socialMediaIcons">
-            <img id="twt" src="images/icon_twt.png">
-            <img id="fb" src="images/icon_fb.png">
-            <img id="insta" src="images/icon_insta.png">
+            <a href="https://twitter.com/home" target="_blank"><img id="twt" src="images/icon_twt.png"></a>
+            <a href="https://www.facebook.com/" target="_blank"><img id="fb" src="images/icon_fb.png"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img id="insta" src="images/icon_insta.png"></a>
         </div>
         <ul id="rightList">
             <li><a href="html/footer/about.html">About</a></li>

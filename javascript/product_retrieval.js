@@ -13,17 +13,32 @@ function showJsonProducts(category) {
             for (var i = 0; i < data.products.length; i++) {
                 let inSale = saleItems.includes(data.products[i].id)
                 if (data.products[i].category == category) {
+                    let cartInStorage = localStorage.getItem('cartItems');
+                    cartInStorage = JSON.parse(cartInStorage)
+                    let inCart = cartInStorage.includes(data.products[i].id)
                     if (inSale == true) {
-                        output2 = `<div class="productPrice"><span class="origPrice">$${data.products[i].origPrice}</span><span class="salePrice">$${data.products[i].price}</span></div>
-                        <button class="addProductBtn" onclick="addToCart(${data.products[i].id})">Add to Cart</button>
-                        </div>
-                        `;
+                        if (inCart == true) {
+                            output2 = `<div class="productPrice"><span class="origPrice">$${data.products[i].origPrice}</span><span class="salePrice">$${data.products[i].price}</span></div>
+                            <button id="addProductBtn${data.products[i].id}" class="addProductBtn" onclick="addToCart(${data.products[i].id})">Item Added</button>
+                            </div>
+                            `;
+                        } else {
+                            output2 = `<div class="productPrice"><span class="origPrice">$${data.products[i].origPrice}</span><span class="salePrice">$${data.products[i].price}</span></div>
+                            <button id="addProductBtn${data.products[i].id}" class="addProductBtn" onclick="addToCart(${data.products[i].id})">Add to Cart</button>
+                            </div>
+                            `;}
                     }
                     else {
-                        output2 = `<div class="productPrice">$${data.products[i].price}</div>
-                        <button class="addProductBtn" onclick="addToCart(${data.products[i].id})">Add to Cart</button>
-                        </div>
-                        `;
+                        if (inCart == true) {
+                            output2 = `<div class="productPrice">$${data.products[i].price}</div>
+                            <button id="addProductBtn${data.products[i].id}" class="addProductBtn" onclick="addToCart(${data.products[i].id})">Item Added</button>
+                            </div>
+                            `;
+                        } else {
+                            output2 = `<div class="productPrice">$${data.products[i].price}</div>
+                            <button id="addProductBtn${data.products[i].id}" class="addProductBtn" onclick="addToCart(${data.products[i].id})">Add to Cart</button>
+                            </div>
+                            `;}
                     }
                     productInfo = `
                     <div class="productInfo">
@@ -49,38 +64,77 @@ function showSpecialProducts(page) {
                 let inNew = newItems.includes(data.products[i].id)
                 let inBest = bestItems.includes(data.products[i].id)
                 let inEditor = editorItems.includes(data.products[i].id)
+
+                let cartInStorage = localStorage.getItem('cartItems');
+                cartInStorage = JSON.parse(cartInStorage)
+                let inCart = cartInStorage.includes(data.products[i].id)
+
                 if (page == "sale" && inSale == true) {
-                    productsArea += `
+                    if (inCart == true) {
+                        productsArea += `
+                            <div class="productInfo">
+                            <img class="productImg" src=${data.products[i].image_url}>
+                            <div class="productName">${data.products[i].name}</div>
+                            <div class="productPrice"><span class="origPrice">$${data.products[i].origPrice}</span><span class="salePrice">$${data.products[i].price}</span></div>
+                            <button id="addProductBtn${data.products[i].id}" class="addProductBtn" onclick="addToCart(${data.products[i].id})">Item Added</button>
+                            </div>
+                            `;
+                    } else {
+                        productsArea += `
                         <div class="productInfo">
                         <img class="productImg" src=${data.products[i].image_url}>
                         <div class="productName">${data.products[i].name}</div>
                         <div class="productPrice"><span class="origPrice">$${data.products[i].origPrice}</span><span class="salePrice">$${data.products[i].price}</span></div>
-                        <button class="addProductBtn" onclick="addToCart(${data.products[i].id})">Add to Cart</button>
+                        <button id="addProductBtn${data.products[i].id}" class="addProductBtn" onclick="addToCart(${data.products[i].id})">Add to Cart</button>
                         </div>
-                        `;
+                        `;}
                 }
                 if (page == "new" && inNew == true) {
-                    productsArea += `
-                        <div class="productInfo">
-                        <img class="productImg" src=${data.products[i].image_url}>
-                        <div class="productName">${data.products[i].name}</div>
-                        <div class="productPrice">$${data.products[i].price}</div>
-                        <button class="addProductBtn" onclick="addToCart(${data.products[i].id})">Add to Cart</button>
-                        </div>
-                        `;
+                    if (inCart == true) {
+                        productsArea += `
+                            <div class="productInfo">
+                            <img class="productImg" src=${data.products[i].image_url}>
+                            <div class="productName">${data.products[i].name}</div>
+                            <div class="productPrice">$${data.products[i].price}</div>
+                            <button id="addProductBtn${data.products[i].id}" class="addProductBtn" onclick="addToCart(${data.products[i].id})">Item Added</button>
+                            </div>
+                            `;
+                    } else {
+                        productsArea += `
+                            <div class="productInfo">
+                            <img class="productImg" src=${data.products[i].image_url}>
+                            <div class="productName">${data.products[i].name}</div>
+                            <div class="productPrice">$${data.products[i].price}</div>
+                            <button id="addProductBtn${data.products[i].id}" class="addProductBtn" onclick="addToCart(${data.products[i].id})">Add to Cart</button>
+                            </div>
+                            `;}
                 }
                 if (page == "best" && inBest == true) {
                     if (inSale == true) {
-                        output2 = `<div class="productPrice"><span class="origPrice">$${data.products[i].origPrice}</span><span class="salePrice">$${data.products[i].price}</span></div>
-                            <button class="addProductBtn" onclick="addToCart(${data.products[i].id})">Add to Cart</button>
+                        if (inCart == true) {
+                            output2 = `<div class="productPrice"><span class="origPrice">$${data.products[i].origPrice}</span><span class="salePrice">$${data.products[i].price}</span></div>
+                                <button id="addProductBtn${data.products[i].id}" class="addProductBtn" onclick="addToCart(${data.products[i].id})">Item Added</button>
+                                </div>
+                                `;
+                        } else {
+                            output2 = `<div class="productPrice"><span class="origPrice">$${data.products[i].origPrice}</span><span class="salePrice">$${data.products[i].price}</span></div>
+                            <button id="addProductBtn${data.products[i].id}" class="addProductBtn" onclick="addToCart(${data.products[i].id})">Add to Cart</button>
                             </div>
                             `;
+                        }
                     }
                     else {
-                        output2 = `<div class="productPrice">$${data.products[i].price}</div>
-                            <button class="addProductBtn" onclick="addToCart(${data.products[i].id})">Add to Cart</button>
+                        if (inCart == true) {
+                            output2 = `<div class="productPrice">$${data.products[i].price}</div>
+                                <button id="addProductBtn${data.products[i].id}" class="addProductBtn" onclick="addToCart(${data.products[i].id})">Item Added</button>
+                                </div>
+                                `;
+                        } else {
+                            output2 = `<div class="productPrice">$${data.products[i].price}</div>
+                            <button id="addProductBtn${data.products[i].id}" class="addProductBtn" onclick="addToCart(${data.products[i].id})">Add to Cart</button>
                             </div>
                             `;
+                        }
                     }
                     productInfo = `
                         <div class="productInfo">
@@ -90,14 +144,25 @@ function showSpecialProducts(page) {
                     productsArea += productInfo;
                 }
                 if (page == "editor" && inEditor == true) {
-                    productsArea += `
+                    if (inCart == true) {
+                        productsArea += `
+                            <div class="productInfo">
+                            <img class="productImg" src=${data.products[i].image_url}>
+                            <div class="productName">${data.products[i].name}</div>
+                            <div class="productPrice">$${data.products[i].price}</div>
+                            <button id="addProductBtn${data.products[i].id}" class="addProductBtn" onclick="addToCart(${data.products[i].id})">Item Added</button>
+                            </div>
+                            `;
+                    } else {
+                        productsArea += `
                         <div class="productInfo">
                         <img class="productImg" src=${data.products[i].image_url}>
                         <div class="productName">${data.products[i].name}</div>
                         <div class="productPrice">$${data.products[i].price}</div>
-                        <button class="addProductBtn" onclick="addToCart(${data.products[i].id})">Add to Cart</button>
+                        <button id="addProductBtn${data.products[i].id}" class="addProductBtn" onclick="addToCart(${data.products[i].id})">Add to Cart</button>
                         </div>
                         `;
+                    }
                 }
             }
             document.getElementById('productsArea').innerHTML = productsArea;
@@ -121,6 +186,8 @@ if (localStorage.getItem('cartItems') == null) {
 }
 
 function addToCart(id) {
+    document.getElementById("addProductBtn" + id).textContent="Item added";
+
     let cartInStorage = localStorage.getItem('cartItems');
     let cartDetailsInStorage = localStorage.getItem('cartDetailsItems');
     cartInStorage = JSON.parse(cartInStorage)
@@ -214,13 +281,13 @@ function sortProducts(category) {
                 let inSale = saleItems.includes(productsArray[i].id)
                 if (inSale == true) {               // Display price differently if they are on sale
                     output2 = `<div class="productPrice"><span class="origPrice">$${productsArray[i].origPrice}</span><span class="salePrice">$${productsArray[i].price}</span></div>
-                        <button class="addProductBtn" onclick="addToCart(${productsArray[i].id})">Add to Cart</button>
+                        <button id="addProductBtn${data.products[i].id}" class="addProductBtn" onclick="addToCart(${productsArray[i].id})">Add to Cart</button>
                         </div>
                         `;
                 }
                 else {
                     output2 = `<div class="productPrice">$${productsArray[i].price}</div>
-                        <button class="addProductBtn" onclick="addToCart(${productsArray[i].id})">Add to Cart</button>
+                        <button id="addProductBtn${data.products[i].id}" class="addProductBtn" onclick="addToCart(${productsArray[i].id})">Add to Cart</button>
                         </div>
                         `;
                 }
@@ -324,7 +391,7 @@ function sortSpecialProducts(page) {
                 }
 
                 output3 = ` 
-                    <button class="addProductBtn" onclick="addToCart(${productsArray[i].id})">Add to Cart</button>
+                    <button id="addProductBtn${data.products[i].id}" class="addProductBtn" onclick="addToCart(${productsArray[i].id})">Add to Cart</button>
                     </div>
                     `;
                 

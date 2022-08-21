@@ -49,16 +49,20 @@
     <div id="cover2">
         <img src="../../images/cover_contact.png">
     </div>
+    <h1 id="contactHeading">CONTACT</h1>
     <div id="contactContent">
-        <h1 id="contactHeading">CONTACT</h1>
-        <h3 id="signUpHeading">Sign up for updates from <span>CRESCENT HOUSE</span></h3>
-        <p>Get notices on product launches, offers, and exclusive discounts.</p>
-        <form>
-            <input id="name" class="inputField" type="text" placeholder="Name">
-            <input id="contactEmail" class="inputField" type="email" placeholder="Email">
-        </form>
-        <input type="button" id="signUpBtn" value="Sign Up" onclick="generateMessage()">
+        <div id="contactHeadingsAndForm">
+            <h3 id="signUpHeading">Sign up for updates from <span>CRESCENT HOUSE</span></h3>
+            <p>Get notices on product launches, offers, and exclusive discounts.</p>
+            <form id="contactForm">
+                <input id="name" class="inputField" type="text" placeholder="Name">
+                <input id="contactEmail" class="inputField" type="email" placeholder="Email">
+                <input type="button" id="signUpBtn" value="Sign Up" onclick="generateMessage()">
+            </form>
+        </div>
 
+        <div id="contactMessage"></div>
+        
         <aside id="contactAside">
             <p>For inquiries about orders, please contact <a id="emailLink"
                     href="mailto:customerservice@crescenthouse.com">customerservice@crescenthouse.com</a></p>
@@ -68,9 +72,9 @@
     <footer>
         <h3>Follow us</h3>
         <div id="socialMediaIcons">
-            <img id="twt" src="../../images/icon_twt.png">
-            <img id="fb" src="../../images/icon_fb.png">
-            <img id="insta" src="../../images/icon_insta.png">
+            <a href="https://twitter.com/home" target="_blank"><img id="twt" src="../../images/icon_twt.png"></a>
+            <a href="https://www.facebook.com/" target="_blank"><img id="fb" src="../../images/icon_fb.png"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img id="insta" src="../../images/icon_insta.png"></a>
         </div>
         <ul id="rightList">
             <li><a href="about.html">About</a></li>
@@ -86,6 +90,7 @@
     </footer>
 
     <script src="../../javascript/showProductCount.js"></script>
+    <script src="../../javascript/contact.js"></script>
 </body>
 
 </html>

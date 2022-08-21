@@ -13,7 +13,7 @@ function plusSlides(n) {
   showSlides(index += n);
 }
 
-// Thumbnail image controls
+// dotcontrols
 function currentSlide(n) {
   showSlides(index = n);
 }
@@ -38,6 +38,21 @@ function showSlides(n) {
   dots[index-1].className += " active";
 }
 
+function slide(direction){
+  var container = document.getElementById('trendingBoxes');
+  scrollCompleted = 0;
+  var slideVar = setInterval(function(){
+      if(direction == 'left'){
+          container.scrollLeft -= 20;
+      } else {
+          container.scrollLeft += 20;
+      }
+      scrollCompleted += 10;
+      if(scrollCompleted >= 100){
+          window.clearInterval(slideVar);
+      }
+  }, 30);
+}
 
 /* -------------- Automatic Slide Show --------------
 let index = 0;
